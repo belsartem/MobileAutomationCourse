@@ -2,18 +2,18 @@ import org.junit.Test;
 
 public class MainClassTest extends MainClass {
 
-        MainClass mainClass = new MainClass();
+    MainClass mainClass = new MainClass();
 
     @Test
-    public void testGetLocalNumber() {
+    public void testGetClassNumber() {
 
-        int a = this.getLocalNumber(14);
+        int a = mainClass.getClassNumber(20);
 
-        if (a == 14) {
-            System.out.println("Число равно 14");
+        if (a < 45) {
+            System.out.println("Число меньше 45");
         }
         else {
-            System.out.println(mainClass.testErrorMessage("ОШИБКА! Возвращенное число не равно " + mainClass.getLocalNumber(mainClass.getLocalNumber(14))));
+            System.out.println(mainClass.testErrorMessage("ОШИБКА! Возвращенное число больше 45 "));
         }
     }
 }
