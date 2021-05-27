@@ -1,9 +1,9 @@
 public class MainClass {
 
-    private int class_number;
+    private int class_string;
 
-    public int getClassNumber(int class_number) {
-        return class_number;
+    public String getClassString(String class_string) {
+        return class_string;
     }
 
     public String testErrorMessage(String error_massage) {

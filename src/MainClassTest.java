@@ -5,15 +5,20 @@ public class MainClassTest extends MainClass {
     MainClass mainClass = new MainClass();
 
     @Test
-    public void testGetClassNumber() {
+    public void testGetClassString() {
 
-        int a = mainClass.getClassNumber(20);
+        String helloWorld = mainClass.getClassString("Hello, world!");
+        String substrUpper = "Hello";
+        String substrLower = "hello";
 
-        if (a < 45) {
-            System.out.println("Число меньше 45");
+        if (helloWorld.contains(substrUpper)) {
+            System.out.println("Строка содержит " + substrUpper);
+        }
+        else if (helloWorld.contains(substrLower)) {
+            System.out.println("Строка содержит " + substrLower);
         }
         else {
-            System.out.println(mainClass.testErrorMessage("ОШИБКА! Возвращенное число больше 45 "));
+            System.out.println(mainClass.testErrorMessage("ОШИБКА! Строка не содержит нужного значения"));
         }
     }
 }
